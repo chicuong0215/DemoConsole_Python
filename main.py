@@ -1,3 +1,3 @@
-import keo_bua_bao
+import tai_xiu
 
-keo_bua_bao.run()
+tai_xiu.run()
