@@ -65,6 +65,25 @@ class Triangle:
         return self.a + self.b + self.c
 
 
+class Circle:
+    def __init__(self, r):
+        self = self
+        self.name = 'Hình tròn'
+        self.r = r
+
+    def show_info(self):
+        print(self.name)
+        print('\tBán kính: ' + str(self.r))
+        print('\tDiện tích: ' + str(self.get_area()))
+        print('\tChu vi: ' + str(self.get_circuit()))
+
+    def get_area(self):
+        return math.pi * self.r * self.r
+
+    def get_circuit(self):
+        return 2 * math.pi * self.r
+
+
 # use class
 rectangle = Rectangle(3, 5)
 rectangle.show_info()
@@ -74,3 +93,6 @@ square.show_info()
 
 triangle = Triangle(3, 4, 5)
 triangle.show_info()
+
+circle = Circle(5)
+circle.show_info()
