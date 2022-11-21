@@ -40,7 +40,7 @@ class Square(Rectangle):
 class Triangle:
     def __init__(self, a, b, c):
         self.is_triangle = False
-        if a + b > c and a + c > c and b + c > a:
+        if a + b > c and a + c > b and b + c > a:
             self.is_triangle = True
             self.a = a
             self.b = b
@@ -58,7 +58,7 @@ class Triangle:
             print('Không phải hình tam giác!')
 
     def get_area(self):
-        p = (1 / 2) * (self.a + self.b + self.c)
+        p = (1 / 2) * self.get_circuit()
         return math.sqrt(p * (p - self.a) * (p - self.b) * (p - self.c))
 
     def get_circuit(self):
