@@ -1,3 +1,3 @@
-import tai_xiu
+import bau_cua
 
-tai_xiu.run()
+bau_cua.run()

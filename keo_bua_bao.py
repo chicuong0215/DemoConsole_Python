@@ -2,8 +2,7 @@ import random
 
 
 def run():
-    is_continue = True
-    while is_continue:
+    while True:
         print('Lựa chọn của bạn (keo, bua, bao): ')
         user_selection = str.lower(input())
         machine_selection = random.choice(['keo', 'bua', 'bao'])
@@ -34,5 +33,4 @@ def run():
                 print('Bạn thắng!')
 
         print('Bạn có muốn tiếp tục? (y/n): ')
-        is_continue = input()
-        if str.lower(is_continue) == 'n': break
+        if str.lower(input()) == 'n': break
