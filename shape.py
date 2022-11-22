@@ -1,4 +1,3 @@
-# init class
 import math
 
 
@@ -84,7 +83,7 @@ class Circle:
         return 2 * math.pi * self.r
 
 
-# use class
+# test
 rectangle = Rectangle(3, 5)
 rectangle.show_info()
 

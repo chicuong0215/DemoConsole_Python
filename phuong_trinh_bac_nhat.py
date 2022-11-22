@@ -1,4 +1,4 @@
-def run():
+while True:
     print('Phương trình bậc nhất có dạng: ax+b=0')
 
     print('Nhập a = ')
@@ -13,3 +13,6 @@ def run():
     if a == 0:
         if b == 0: print('Vô số nghiệm!')
         if b != 0: print('Vô nghiệm!')
+
+    print('Bạn có muốn tiếp tục? (y/n): ')
+    if str.lower(input()) == 'n': break
