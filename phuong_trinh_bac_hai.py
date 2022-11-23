@@ -3,13 +3,15 @@ import math
 while True:
     print('Phương trình bậc hai có dạng: ax^2+bx+c=0')
 
-    print('Nhập a = ')
+    print('Nhập a = ', end='')
     a = float(input())
-    print('Nhập b = ')
+    print('Nhập b = ', end='')
     b = float(input())
-    print('Nhập c = ')
+    print('Nhập c = ', end='')
     c = float(input())
 
+    print(str(a) + 'x^2' + (' + ' if b > 0 else ' - ') + str(abs(b)) + 'x' + (' + ' if c > 0 else ' - ') + str(
+        abs(c)) + ' = 0')
     print('Nghiệm của phương trình:')
     delta = b * b - 4 * a * c
     if delta < 0:

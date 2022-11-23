@@ -7,7 +7,7 @@ while True:
         print('Điểm hiện tại: ' + str(score))
         print('Lựa chọn: ')
         for i in select_arr:
-            print('\t' + i + ' - điểm đặt cược: ')
+            print('\t' + i + ' - điểm đặt cược: ', end='')
             select_arr[i] = int(input())
             score -= select_arr[i]
 
@@ -18,13 +18,13 @@ while True:
         print('Kết quả:')
         for i in select_arr:
             if i == item1:
-                print('\t' + item1 + ": +" + str(2 * select_arr[i]))
+                print('\t' + item1 + ': +' + str(2 * select_arr[i]))
                 score += 2 * select_arr[i]
             if i == item2:
-                print('\t' + item2 + ": +" + str(2 * select_arr[i]))
+                print('\t' + item2 + ': +' + str(2 * select_arr[i]))
                 score += 2 * select_arr[i]
             if i == item3:
-                print('\t' + item3 + ": +" + str(2 * select_arr[i]))
+                print('\t' + item3 + ': +' + str(2 * select_arr[i]))
                 score += 2 * select_arr[i]
 
         print('Điểm hiện tại: ' + str(score))

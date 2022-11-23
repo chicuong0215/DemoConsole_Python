@@ -1,7 +1,7 @@
 import random
 
 while True:
-    print('Lựa chọn của bạn (keo, bua, bao): ')
+    print('Lựa chọn của bạn (keo, bua, bao): ', end='')
     user_selection = str.lower(input())
     machine_selection = random.choice(['keo', 'bua', 'bao'])
 

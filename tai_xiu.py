@@ -1,7 +1,7 @@
 import random
 
 while True:
-    print('Lựa chọn của bạn (tai, xiu): ')
+    print('Lựa chọn của bạn (tai, xiu): ', end='')
     user_selection = str.lower(input())
     item1 = random.randint(1, 6)
     item2 = random.randint(1, 6)
