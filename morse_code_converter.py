@@ -63,9 +63,23 @@ def decode(text):
                 print(key, end='')
 
 
+def run():
+    while True:
+        print("Chức năng")
+        print("\t1. Morse encode")
+        print("\t2. Morse decode")
+        print("Lựa chọn: ", end='')
+        selection = int(input())
+        if selection == 1:
+            print("Nhập text: ", end='')
+            encode(input())
+        if selection == 2:
+            print("Nhập text: ", end='')
+            decode((input()))
+
+        print('\nBạn có muốn tiếp tục? (y/n): ')
+        if str.lower(input()) == 'n': break
+
+
 # test
-text1 = 'nguyenchicuong'
-encode(text1)
-print()
-text2 = '-. --. ..- -.-- . -. -.-. .... .. -.-. ..- --- -. --.'
-decode(text2)
+run()

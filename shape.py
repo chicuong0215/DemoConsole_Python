@@ -18,8 +18,8 @@ class Rectangle:
         self.draw()
 
     def draw(self):
-        for i in range(self.width):
-            for j in range(self.length):
+        for i in range(int(self.width)):
+            for j in range(int(self.length)):
                 print('*', end=" ")
             print()
 
@@ -83,15 +83,47 @@ class Circle:
         return 2 * math.pi * self.r
 
 
+def run():
+    while True:
+        print("Chức năng")
+        print("\t1. Hình chữ nhật")
+        print("\t2. Hình vuông")
+        print("\t3. Hình tam giác")
+        print("\t4. Hình tròn")
+        print("Lựa chọn: ", end='')
+        selection = int(input())
+        if selection == 1:
+            print("Hình chữ nhật")
+            print("Nhập chiều dài và chiều rộng hình chữ nhật")
+            print("Chiều dài: ", end='')
+            length = float(input())
+            print("Chiều rộng: ", end='')
+            width = float(input())
+            Rectangle(width, length).show_info()
+        if selection == 2:
+            print("Hình vuông")
+            print("Nhập độ dài cạnh hình vuông: ", end='')
+            a = float(input())
+            Square(a).show_info()
+        if selection == 3:
+            print("Hình tam giác")
+            print("Nhập độ dài 3 cạnh của tam giác")
+            print("a = ", end='')
+            a = float(input())
+            print("b = ", end='')
+            b = float(input())
+            print("c = ", end='')
+            c = float(input())
+            Triangle(a, b, c).show_info()
+        if selection == 4:
+            print("Hình tròn")
+            print("Nhập bán kính hình tròn: ", end='')
+            r = float(input())
+            Circle(r).show_info()
+
+        print('\nBạn có muốn tiếp tục? (y/n): ')
+        if str.lower(input()) == 'n': break
+
+
 # test
-rectangle = Rectangle(3, 5)
-rectangle.show_info()
-
-square = Square(3)
-square.show_info()
-
-triangle = Triangle(3, 4, 5)
-triangle.show_info()
-
-circle = Circle(5)
-circle.show_info()
+run()
